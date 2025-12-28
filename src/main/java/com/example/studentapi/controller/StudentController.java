@@ -23,6 +23,15 @@ public class StudentController {
         serv = srv;
     }
 
+    @PutMapping("/student/update/{id}")
+    public ResponseEntity<Student> updaStudent(@PathVariable int id, @Valid @RequestBody Student st) {
+        Student updated = serv.updaStudent(id, st);
+        if (updated == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(updated);
+    }
+
     @PostMapping("/student/save")
     public ResponseEntity<StudentDTO> savStudent(@Valid @RequestBody StudentDTO st) {
         StudentDTO saved = serv.savStudent(st);

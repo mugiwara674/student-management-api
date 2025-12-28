@@ -20,7 +20,7 @@ public class StudentService {
         Student st1 = new Student();
         st1.setId(st.getId());
         st1.setGender(st.getGender());
-        st1.setName(st.getGender());
+        st1.setName(st.getName());
         Student saved = repo.save(st1);
         StudentDTO response = new StudentDTO();
         response.setGender(saved.getGender());
