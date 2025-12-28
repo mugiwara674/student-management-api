@@ -3,6 +3,7 @@ package com.example.studentapi.service;
 import java.util.Optional;
 
 import com.example.studentapi.dto.StudentDTO;
+import com.example.studentapi.dto.StudentPatchDTO;
 import com.example.studentapi.model.Student;
 import com.example.studentapi.repository.StudentRepository;
 
@@ -14,6 +15,35 @@ public class StudentService {
 
     public StudentService(StudentRepository repo) {
         this.repo = repo;
+    }
+
+    public StudentDTO patchStudent(int id, StudentPatchDTO st) {
+        Student ex = repo.findById(id)
+                .orElseThrow(() -> new RuntimeException("Student not found"));
+
+        if (st.getName() != null) {
+            ex.setName(st.getName());
+        }
+        if (st.getGender() != null) {
+            ex.setGender(st.getGender());
+        }
+        return entityToDTO(repo.save(ex));
+    }
+
+    public Student dtoToEntity(StudentDTO dt) {
+        Student st = new Student();
+        st.setId(dt.getId());
+        st.setName(dt.getName());
+        st.setGender(dt.getGender());
+        return st;
+    }
+
+    public StudentDTO entityToDTO(Student st) {
+        StudentDTO dt = new StudentDTO();
+        dt.setId(st.getId());
+        dt.setName(st.getName());
+        dt.setGender(st.getGender());
+        return dt;
     }
 
     public StudentDTO savStudent(StudentDTO st) {
