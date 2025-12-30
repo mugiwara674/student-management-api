@@ -1,39 +1,39 @@
-Student Management REST API
+Student Management REST API <br>
 
-A simple and clean Spring Boot RESTful API for managing student records.
-Built using layered architecture with DTOs, validation, and global exception handling.
+A simple and clean Spring Boot RESTful API for managing student records.<br>
+Built using layered architecture with DTOs, validation, and global exception handling.<br>
 
-Features
+Features<br> <br>
 
-Create, Read, Update, Delete (CRUD) student records
+Create, Read, Update, Delete (CRUD) student records<br>
 
-DTO-based request & response handling
+DTO-based request & response handling<br>
 
-Input validation using Jakarta Validation
+Input validation using Jakarta Validation<br>
 
-Global exception handling
+Global exception handling<br>
 
-RESTful API design
+RESTful API design<br>
 
-Clean package structure (Controller, Service, Repository, Model)
+Clean package structure (Controller, Service, Repository, Model)<br>
 
-Tech Stack
+Tech Stack<br>
 
-Java
+Java<br>
 
-Spring Boot
+Spring Boot<br>
 
-Spring Web
+Spring Web<br>
 
-Spring Data JPA
+Spring Data JPA<br>
 
-Maven
+Maven<br>
 
-Hibernate
+Hibernate<r>
 
-MySQL / H2 (configurable)
-
-📁 Project Structure
+MySQL / H2 (configurable)<br>
+<br><br>
+📁 Project Structure<br>
 src/main/java/com/example/studentapi
 │
 ├── controller
@@ -56,70 +56,70 @@ src/main/java/com/example/studentapi
 │
 └── StudentApplication.java
 
-API Endpoints
-Create Student
-POST /api/students
+API Endpoints<br>
+Create Student<br>
+POST /api/students<br>
 
-Request Body
+Request Body<br>
 
 {
 "name": "John Doe",
 "email": "john@example.com",
 "age": 21
-}
+}<br>
 
-Validation Rules
+Validation Rules<br>
 
-Name must not be empty
+Name must not be empty<br>
 
-Email must be valid
+Email must be valid<br>
 
-Age must be greater than 0
+Age must be greater than 0<br>
 
-Validation errors are handled globally and return meaningful responses.
+Validation errors are handled globally and return meaningful responses.<br>
 
-Database Configuration
+Database Configuration<br>
 
-Update application.properties:
+Update application.properties:<br>
 
-spring.datasource.url=jdbc:mysql://localhost:3306/studentdb
-spring.datasource.username=root
-spring.datasource.password=your_password
+spring.datasource.url=jdbc:mysql://localhost:3306/studentdb<br>
+spring.datasource.username=root<br>
+spring.datasource.password=your_password<br>
 
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update<br>
+spring.jpa.show-sql=true<br>
 
-(H2 can be used for testing)
+(H2 can be used for testing)<br>
 
-Running the Application
+Running the Application<br>
 mvn spring-boot:run
 
-Application will start at:
+Application will start at:<br>
 
 http://localhost:7777
 
-Learning Outcomes
+Learning Outcomes<br>
 
-Understood DTO vs Entity separation
+Understood DTO vs Entity separation<br>
 
-Implemented clean service-based architecture
+Implemented clean service-based architecture<br>
 
-Gained hands-on experience with Spring Boot REST APIs
+Gained hands-on experience with Spring Boot REST APIs<br>
 
-Learned exception handling and validation in real projects
+Learned exception handling and validation in real projects<br>
 
-Future Enhancements
+Future Enhancements<br>
 
-PATCH API for partial updates
+PATCH API for partial updates<br>
 
-Pagination & sorting
+Pagination & sorting<br>
 
-Swagger (OpenAPI) documentation
+Swagger (OpenAPI) documentation<br>
 
-Authentication & Authorization (JWT)
+Authentication & Authorization (JWT)<br>
 
-Deployment using Docker / Cloud
+Deployment using Docker / Cloud<br>
 
-Author:
-Marthala Muni
+Author:<br>
+Marthala Muni<br>
 B.Tech Student | Backend Developer (Spring Boot)
