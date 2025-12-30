@@ -34,27 +34,27 @@ Hibernate<r>
 MySQL / H2 (configurable)<br>
 <br><br>
 📁 Project Structure<br>
-src/main/java/com/example/studentapi
+src/main/java/com/example/studentapi<br>
 │
-├── controller
-│ └── StudentController.java
+├── controller<br>
+│ └── StudentController.java<br>
 │
-├── service
-│ └── StudentService.java
+├── service<br>
+│ └── StudentService.java<br>
 │
-├── repository
-│ └── StudentRepository.java
+├── repository<br>
+│ └── StudentRepository.java<br>
 │
-├── model
-│ └── Student.java
+├── model<br>
+│ └── Student.java<br>
 │
-├── dto
-│ └── StudentDTO.java
+├── dto<br>
+│ └── StudentDTO.java<br>
 │
-├── exception
-│ └── GlobalExceptionHandler.java
+├── exception<br>
+│ └── GlobalExceptionHandler.java<br>
 │
-└── StudentApplication.java
+└── StudentApplication.java<br>
 
 API Endpoints<br>
 Create Student<br>
