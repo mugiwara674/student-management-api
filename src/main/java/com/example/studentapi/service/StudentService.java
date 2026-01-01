@@ -59,7 +59,7 @@ public class StudentService {
         return response;
     }
 
-    public Student updaStudent(int id, Student st) {
+    public StudentDTO updaStudent(int id, Student st) {
         Optional<Student> op = repo.findById(id);
         if (op.isEmpty()) {
             return null;
@@ -68,8 +68,13 @@ public class StudentService {
         ex.setName(st.getName());
         ex.setGender(st.getGender());
 
-        return repo.save(ex);
+        Student saved = repo.save(ex);
 
+        StudentDTO response = new StudentDTO();
+        response.setGender(saved.getGender());
+        response.setId(saved.getId());
+        response.setName(saved.getName());
+        return response;
     }
 
     public StudentDTO getStudent(int id) {

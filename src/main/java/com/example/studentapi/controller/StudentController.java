@@ -35,8 +35,8 @@ public class StudentController {
     }
 
     @PutMapping("/student/update/{id}")
-    public ResponseEntity<Student> updaStudent(@PathVariable int id, @Valid @RequestBody Student st) {
-        Student updated = serv.updaStudent(id, st);
+    public ResponseEntity<StudentDTO> updaStudent(@PathVariable int id, @Valid @RequestBody Student st) {
+        StudentDTO updated = serv.updaStudent(id, st);
         if (updated == null) {
             return ResponseEntity.notFound().build();
         }
