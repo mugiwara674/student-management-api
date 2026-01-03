@@ -33,25 +33,25 @@ Hibernate<r>
 
 MySQL / H2 (configurable)<br>
 <br><br>
-📁 Project Structure<br>
+📁 Project Structure
 src/main/java/com/example/studentapi<br>
 │
-├── controller<br>
+├── controller
 │ └── StudentController.java<br>
 │
-├── service<br>
+├── service
 │ └── StudentService.java<br>
 │
-├── repository<br>
+├── repository
 │ └── StudentRepository.java<br>
 │
-├── model<br>
+├── model
 │ └── Student.java<br>
 │
-├── dto<br>
+├── dto
 │ └── StudentDTO.java<br>
 │
-├── exception<br>
+├── exception
 │ └── GlobalExceptionHandler.java<br>
 │
 └── StudentApplication.java<br>
